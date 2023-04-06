@@ -2,7 +2,7 @@
     session_start();
     require_once 'config/db.php';
 
-
+    
     if (isset($_POST['signin'])){
         $email=$_POST['email'];
         $password=$_POST['password'];
