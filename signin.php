@@ -36,11 +36,11 @@
             <?php } ?>
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" aria-describedby="email">
+                <input type="email" class="form-control" name="email" aria-describedby="email">
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password">
+                <input type="password" class="form-control" name="password">
             </div>
             <button type="submit" name="signin" class="btn btn-primary">Sign In</button>
         </form>

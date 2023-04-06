@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    session_start(); //ประกาศ session start
     require_once 'config/db.php';
 
     if (isset($_POST['signup'])){
@@ -47,8 +47,7 @@
                     header("location: index.php");
                 }elseif (!isset($_SESSION['error'])) {
                     $passwordHash = password_hash($password, PASSWORD_DEFAULT);
-                    $stmt = $conn -> prepare("INSERT INTO user(firstname, lastname, email, password, urole)
-                                            VALUES(:firstname, :lastname, :email, :password, :urole)");
+                    $stmt = $conn -> prepare("INSERT INTO user(firstname, lastname, email, password, urole) VALUES(:firstname, :lastname, :email, :password, :urole)");
                     $stmt->bindParam(":firstname", $firstname);
                     $stmt->bindParam(":lastname", $lastname);
                     $stmt->bindParam(":email", $email);

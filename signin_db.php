@@ -46,12 +46,12 @@
                             header("location: signin.php");
                     }
                     }else{
-                    $_SESSION['error'] = 'อีเมลผิด';
-                    header("location: signin.php");
-                        }
+                        $_SESSION['error'] = 'อีเมลผิด';
+                        header("location: signin.php");
+                    }
                 }else{
                     $_SESSION['error']="ไม่มีข้อมูลในระบบ";
-                    $header("location: signin.php");
+                    header("location: signin.php");
                 }
 
             }catch(PDOException $e){
